@@ -3,9 +3,12 @@
 
 #include <iostream>
 
+#include <Poco/Environment.h>
+
 int main()
 {
-    std::cout << "Hello World!\n";
+	Poco::Environment os;
+    std::cout << "Hello " << os.osName() << "!\n";
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
